@@ -1,7 +1,9 @@
 Session3app::Application.routes.draw do
-  get "pages/home"
+  
+  root :to => "pages#home"
+    match 'about' => 'pages#about'
 
-  get "pages/about"
+
 
   resources :users
 
